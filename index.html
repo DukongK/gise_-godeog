@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>지산현장정보</title>
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
     <!--xxx 기본 스타일 수정하면 안됨 xxx -->
     <style>
       .content {
@@ -60,7 +61,7 @@
       <img src="img/img3/7-8층.png" />
       <img src="img/img3/9-10층.png" />
     </div>
-
+    <!-- 지식공작소 아이타워 -->
     <button onclick="toggleContent('content4')">4_지식공작소 아이타워</button
     ><br /><br />
     <div id="content4" class="content">
@@ -77,7 +78,7 @@
       <img src="img/img4/9층.png" />
       <img src="img/img4/10층.png" />
     </div>
-
+    <!-- 에스타워 프라임 -->
     <button onclick="toggleContent('content5')">5_에스타워 프라임</button
     ><br /><br />
     <div id="content5" class="content">
@@ -92,7 +93,7 @@
       <img src="img/img5/6층(1).png" />
       <img src="img/img5/7-10층(1).png" />
     </div>
-
+    <!-- stv -->
     <button onclick="toggleContent('content6')">6_STV</button><br /><br />
     <div id="content6" class="content">
       <h1>6_STV</h1>
@@ -110,7 +111,7 @@
       <img src="img/img6/9층.jpg" />
       <img src="img/img6/10층.jpg" />
     </div>
-
+    <!-- 금호 stv -->
     <button onclick="toggleContent('content7')">7_금호 STV(더라이브)</button
     ><br /><br />
     <div id="content7" class="content">
@@ -128,7 +129,7 @@
       <img src="img/img7/9층.jpg" />
       <img src="img/img7/10층.jpg" />
     </div>
-
+    <!-- 비즈타워 -->
     <button onclick="toggleContent('content8')">8_비즈타워</button><br /><br />
     <div id="content8" class="content">
       <h1>8_비즈타워</h1>
@@ -139,7 +140,7 @@
       <img src="img/img8/9층.png" />
       <img src="img/img8/10층.png" />
     </div>
-
+    <!--  에이스퍼스트고덕 -->
     <button onclick="toggleContent('content9')">9_에이스퍼스트고덕</button
     ><br /><br />
     <div id="content9" class="content">
@@ -156,7 +157,7 @@
       <img src="img/img9/9층.jpg" />
       <img src="img/img9/10층.jpg" />
     </div>
-
+    <!-- sac빌딩 -->
     <button onclick="toggleContent('content10')">
       10_SAC빌딩(에이아이센터)</button
     ><br /><br />
@@ -174,7 +175,7 @@
       <img src="img/img10/8층.jpg" />
       <img src="img/img10/9층.jpg" />
     </div>
-
+    <!-- sbc비지니스센터 -->
     <button onclick="toggleContent('content11')">11_SBC비지니스센터</button
     ><br /><br />
     <div id="content11" class="content">
@@ -186,7 +187,7 @@
       <img src="img/img11/5-9층.jpg" />
       <img src="img/img11/7층.jpg" />
     </div>
-
+    <!-- 프리미엄 원희캐슬 -->
     <button onclick="toggleContent('content12')">12_프리미엄 원희캐슬</button
     ><br /><br />
     <div id="content12" class="content">
@@ -203,7 +204,7 @@
       <img src="img/img12/9층.jpg" />
       <img src="img/img12/10층.jpg" />
     </div>
-
+    <!-- 에스타워 -->
     <button onclick="toggleContent('content13')">
       13_에스타워(에이스S타워)</button
     ><br /><br />
@@ -219,7 +220,7 @@
       <img src="img/img13/9.png" />
       <img src="img/img13/10.png" />
     </div>
-
+    <!-- 마제스트타워 -->
     <button onclick="toggleContent('content14')">14_마제스트타워</button
     ><br /><br />
     <div id="content14" class="content">
@@ -231,7 +232,7 @@
       <img src="img/img14/6층.png" />
       <img src="img/img14/7-10층.png" />
     </div>
-
+    <!-- jh타워 -->
     <button onclick="toggleContent('content15')">15_JH타워</button><br /><br />
     <div id="content15" class="content">
       <h1>15_JH타워</h1>
@@ -244,7 +245,7 @@
       <img src="img/img15/지상9층.png" />
       <img src="img/img15/지상10층12층.png" />
     </div>
-
+    <!-- 부성타워 -->
     <button onclick="toggleContent('content16')">16_부성타워(부성U타워)</button
     ><br /><br />
     <div id="content16" class="content">
@@ -267,8 +268,28 @@
     </div>
 
     <!-- xxx 기본 스크립트 수정 xxx -->
+    <!-- <script>
+      function toggleContent(contentId) {
+        const content = document.getElementById(contentId);
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+    </script> -->
+
     <script>
       function toggleContent(contentId) {
+        // 모든 콘텐츠를 가져와서 닫음
+        const allContents = document.querySelectorAll(".content");
+        allContents.forEach((content) => {
+          if (content.id !== contentId) {
+            content.style.display = "none";
+          }
+        });
+
+        // 클릭한 콘텐츠만 열기
         const content = document.getElementById(contentId);
         if (content.style.display === "none" || content.style.display === "") {
           content.style.display = "block";
