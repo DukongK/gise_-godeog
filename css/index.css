@@ -17,3 +17,8 @@ button:hover {
   color: #fff;
   background-color: #831726;
 }
+.main_img {
+  width: 80%;
+  height: 800px;
+  object-fit: cover;
+}
