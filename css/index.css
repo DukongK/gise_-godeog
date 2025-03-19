@@ -18,7 +18,7 @@ button:hover {
   background-color: #831726;
 }
 .main_img {
-  width: 100%;
+  width: 1000px;
   height: 800px;
   object-fit: cover;
 }
@@ -31,4 +31,8 @@ button:hover {
 
 #content15 > img {
   width: 80%;
+}
+
+.img_section > img {
+  width: 100%;
 }
