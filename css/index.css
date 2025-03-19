@@ -22,3 +22,13 @@ button:hover {
   height: 800px;
   object-fit: cover;
 }
+
+/* 콘텐츠 14 이미지 사이즈 조절 */
+
+#content14 > img {
+  width: 80%;
+}
+
+#content15 > img {
+  width: 80%;
+}
