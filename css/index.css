@@ -25,14 +25,22 @@ button:hover {
 
 /* 콘텐츠 14 이미지 사이즈 조절 */
 
-#content14 > img {
-  width: 80%;
-}
+
 
 #content15 > img {
   width: 80%;
 }
 
-.img_section > img {
+/* .img_section > img {
   width: 100%;
+} */
+
+
+/*메인 사이즈 다운 */
+
+.size_Down { width:1000px;
+object-fit: cover;}
+
+#content14 > img {
+  width:80%;
 }
