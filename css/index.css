@@ -25,8 +25,6 @@ button:hover {
 
 /* 콘텐츠 14 이미지 사이즈 조절 */
 
-
-
 #content15 > img {
   width: 80%;
 }
@@ -35,12 +33,18 @@ button:hover {
   width: 100%;
 } */
 
-
 /*메인 사이즈 다운 */
 
-.size_Down { width:1000px;
-object-fit: cover;}
+.size_Down {
+  width: 1000px;
+  object-fit: cover;
+}
 
 #content14 > img {
-  width:80%;
+  width: 80%;
+}
+
+.img_sone {
+  width: 1200px;
+  object-fit: cover;
 }
