@@ -44,7 +44,7 @@ button:hover {
   width: 80%;
 }
 
-.img_sone {
+#content1 img:nth-child(3) {
   width: 1200px;
   object-fit: cover;
 }
